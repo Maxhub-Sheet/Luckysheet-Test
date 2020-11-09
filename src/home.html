@@ -43,7 +43,8 @@
             font: true, //重做
             fontSize: true, //字号大小
             textColor: true, //文本颜色
-            fillColor: true, //单元格颜色
+            fillColor: true, //单元格颜色,
+            link:false
 		  },
 		  showstatisticBar: false,
           showsheetbar: false,
@@ -98,7 +99,8 @@
               // console.log(cell,postion,sheetFile,moveState,ctx);
             },
           },
-          data: [sheetCell,sheetFormula],
+          data:[sheetCell,sheetFormula]
+          // data: [sheetCell,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetCell,sheetFormula],
         });
       });
     </script>

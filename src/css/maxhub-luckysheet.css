@@ -171,6 +171,29 @@
     overflow-x: hidden;
     padding: 0px;
     border: none;
+    max-height: 282px;
+}
+
+#luckysheet-sheet-list::-webkit-scrollbar
+{
+    width: 8px;
+    height:8px;
+    background-color:#fff;
+}
+
+/*定义滚动条轨道内阴影+圆角*/
+#luckysheet-sheet-list::-webkit-scrollbar-track
+{
+    border-radius:3px;
+    background-color:#fff;
+}
+/*定义滑块内阴影+圆角*/
+#luckysheet-sheet-list::-webkit-scrollbar-thumb
+{
+    border-radius:3px;
+    border: 2px solid #fff;
+    background-color:#B2B2B2;
+    opacity: 0.6;
 }
 
 #luckysheet-sheet-list .icon{
@@ -212,4 +235,32 @@
     color: #487FF8;
     background: #E6EAF3;
     border-radius: 2px;
+  }
+
+  /* ****调整色板的颜色等****** */
+  .sp-palette .sp-thumb-inner,.sp-palette .sp-thumb-el {
+      border-radius: 0px;
+  }
+
+  .luckysheet-color-reset{
+      display: none;
+  }
+
+  .sp-palette .sp-thumb-el{
+      border: none;
+  }
+
+  #luckysheet-icon-cell-color-menu-menuButton{
+    border:none;
+    background: #FFFFFF;
+    box-shadow: 0 2px 6px 0 rgba(47,54,69,0.20);
+    border-radius: 2px;
+  }
+
+  #luckysheet-icon-cell-color-menu-menuButton .luckysheet-icon-alternateformat,#luckysheet-icon-cell-color-menu-menuButton .luckysheet-menuseparator{
+      display: none;
+  }
+
+  .sp-palette-button-container{
+      /* display: none; */
   }

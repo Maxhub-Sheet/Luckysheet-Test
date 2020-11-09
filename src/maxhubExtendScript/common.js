@@ -39,5 +39,3 @@ export function extendCommonInitial() {
         $("#luckysheet-sheets-menu").find(".iconFormToolbar_icon_AllForms").removeClass("activate-style");
       });
 }
-
-

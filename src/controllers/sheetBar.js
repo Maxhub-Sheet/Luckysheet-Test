@@ -436,11 +436,11 @@ export function initialSheetBar(){
                 }
 
                 let $item = $(this), index = $item.data("index");
-
-                if ($item.data("index") != Store.currentSheetIndex) {
+                // #文顶顶001 总是设置让菜单隐藏
+                // if ($item.data("index") != Store.currentSheetIndex) {
                     sheetmanage.setSheetShow(index);
                     sheetmanage.locationSheet();
-                }
+                // }
             });
 
             initialOpenSheet = false;
