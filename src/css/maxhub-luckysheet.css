@@ -1,9 +1,13 @@
+.luckysheet-sheet-area {
+    background-color: #f7f8f9;
+}
+
 .luckysheet-sheet-area div.luckysheet-sheets-item {
     font-size: 12px;
     text-align: center;
     font-family: PingFangSC-Regular;
     padding: 0px 16px;
-    border: 1px solid rgba(153,153,153,0.20);
+    border: 1px solid rgba(153, 153, 153, 0.20);
 }
 
 .luckysheet-sheet-area div.luckysheet-sheets-item .luckysheet-sheets-item-menu {
@@ -20,40 +24,42 @@
     color: #487ff8;
 }
 
-.luckysheet-sheet-area div.luckysheet-sheets-item-active .luckysheet-sheets-item-color{
+.luckysheet-sheet-area div.luckysheet-sheets-item-active .luckysheet-sheets-item-color {
     background-color: #487ff8;
 }
 
-.luckysheet-sheet-area div.luckysheet-sheets-item .luckysheet-sheets-item-name{
+.luckysheet-sheet-area div.luckysheet-sheets-item .luckysheet-sheets-item-name {
     padding: 0px 2px;
 }
 
 .luckysheet-cell-sheettable,
 .luckysheet-cols-h-cells,
-.luckysheetsheetchange , .luckysheet-cell-main,.luckysheet-rows-h,.luckysheet-cols-h-cells-c{
-  background-color: #f7f8f9;
+.luckysheetsheetchange,
+.luckysheet-cell-main,
+.luckysheet-rows-h,
+.luckysheet-cols-h-cells-c {
+    background-color: #f7f8f9;
 }
 
-#luckysheet-bottom-controll-row{
+#luckysheet-bottom-controll-row {
     display: none;
 }
 
-.luckysheet-scrollbars::-webkit-scrollbar-thumb{
+.luckysheet-scrollbars::-webkit-scrollbar-thumb {
     border-radius: 0px;
-    background-color:rgba(178, 178, 178, 0.4);
-    background-clip:border-box;
-    box-shadow:none;
+    background-color: rgba(178, 178, 178, 0.2);
+    background-clip: border-box;
+    box-shadow: none;
 }
 
 #luckysheet-sheets-value,
 #luckysheet-sheets-scaleMin,
 #luckysheet-sheets-scalePlus {
-  padding: 6px 10px;
-  display: inline-block;
-  float: left;
+    padding: 6px 10px;
+    display: inline-block;
 }
 
-.luckysheet-sheet-area{
+.luckysheet-sheet-area {
     padding: 0px;
 }
 
@@ -61,9 +67,149 @@
     padding: 6px 12px 7px 12px;
     width: 20px;
     height: 20px;
-   
-  }
+}
 
-  .luckysheet-sheet-area .luckysheet-sheets-menu i{
-      font-size: 20px;
+.luckysheet-sheet-area .luckysheet-sheets-menu:hover,
+#luckysheet-sheets-leftscroll:hover,
+#luckysheet-sheets-rightscroll:hover,
+#luckysheet-sheets-scalePlus:hover,
+#luckysheet-sheets-scaleMin:hover,
+#luckysheet-sheets-value:hover {
+    background: #F7F8F9;
+}
+
+.luckysheet-sheet-area .luckysheet-sheets-menu i {
+    font-size: 20px;
+}
+
+.luckysheet-sheet-area .luckysheet-sheets-menu i:hover,
+#luckysheet-sheets-leftscroll i:hover,
+#luckysheet-sheets-rightscroll i:hover,
+#luckysheet-sheets-scaleMin i:hover,
+#luckysheet-sheets-scalePlus i:hover {
+    color: #487FF8;
+    background: #E6EAF3;
+    border-radius: 2px;
+}
+
+/* ***放大和缩小百分比等** */
+#luckysheet-sheets-leftscroll {
+    position: absolute;
+    right: 206px;
+    padding: 6px 4px 6px 16px
+}
+
+#luckysheet-sheets-rightscroll {
+    position: absolute;
+    right: 178px;
+    padding: 6px 4px 6px 4px
+}
+
+#luckysheet-sheets-leftscroll i,
+#luckysheet-sheets-rightscroll i {
+    font-size: 16px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.luckysheet-sheet-area div.luckysheet-sheet-container {
+    left: 44px;
+    right: 242px;
+    position: absolute;
+    width: auto;
+}
+
+#luckysheet-sheets-scaleMin {
+    position: absolute;
+    right: 94px;
+    padding: 6px 0px 6px 0px;
+}
+
+#luckysheet-sheets-scalePlus {
+    position: absolute;
+    right: 27px;
+    padding: 6px 4px 6px 4px;
+}
+
+#luckysheet-sheets-scaleMin i,
+#luckysheet-sheets-scalePlus i {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+}
+
+#luckysheet-sheets-value {
+    position: absolute;
+    right: 55px;
+    width: 31px;
+    height: 17px;
+    line-height: 17px;
+    text-align: center;
+    padding: 6px 0px 7px 0px;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #666666;
+    user-select: none;
+}
+
+#luckysheet-sheets-value:hover {
+    background-color: none;
+}
+
+/* sheet选项卡的菜单项 */
+#luckysheet-sheet-list {
+    left: 12px !important;
+    bottom: 37px !important;
+    background: #fff;
+    box-shadow: 0 2px 6px 0 rgba(47, 54, 69, 0.20);
+    border-radius: 2px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0px;
+    border: none;
+}
+
+#luckysheet-sheet-list .icon{
+    width: 24px;
+    margin: 4px;
+    float: left;
+}
+
+#luckysheet-sheet-list .icon .iconfont {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    /* background: red; */
+    float: left;
+    color: #487FF8;
+}
+
+#luckysheet-sheet-list .luckysheet-cols-menuitem,#luckysheet-sheet-list .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content{
+    height: 32px;
+    line-height: 32px;
+    padding: 2px 8px 2px 0px;
+}
+
+
+#luckysheet-sheet-list .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content
+{
+    /* background-color: tan; */
+    padding: 0px;
+    max-width: 435px;
+    min-width: 292px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+
+#luckysheet-sheets-menu .activate-style{
+    color: #487FF8;
+    background: #E6EAF3;
+    border-radius: 2px;
   }
