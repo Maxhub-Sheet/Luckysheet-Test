@@ -1,3 +1,6 @@
+.luckysheet{
+    min-width: 320px;
+}
 .luckysheet-sheet-area {
     background-color: #f7f8f9;
 }
@@ -238,9 +241,14 @@
   }
 
   /* ****调整色板的颜色等****** */
-  .sp-palette .sp-thumb-inner,.sp-palette .sp-thumb-el {
+  .sp-palette-container .sp-palette .sp-thumb-inner,.sp-palette .sp-thumb-el {
       border-radius: 0px;
   }
+
+  .sp-palette-container .sp-palette-row-0{
+      margin-bottom: 8px;
+  }
+
 
   .luckysheet-color-reset{
       display: none;
