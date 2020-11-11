@@ -301,3 +301,25 @@
       padding: 0px 16px;
       height: 32px;
   }
+
+  /* 工具栏的样式调整 */
+  .luckysheet-toolbar-button:hover,
+.luckysheet-toolbar-menu-button:hover,
+.luckysheet-toolbar-button-hover {
+    background-color: #E6EAF3 ;
+    border-radius: 2px;
+}
+
+.luckysheet-toolbar-button-split-right-hover {
+    /* border-width: 1px;
+    border-color: transparent !important;
+    background-color: rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    box-shadow: none;
+    border-left-color: rgba(0, 0, 0, 0.12) !important; */
+    background-color: #E6EAF3 ;
+}
+
+.luckysheet-toolbar-combo-button:hover{
+    background-color: #E6EAF3 ;
+}
