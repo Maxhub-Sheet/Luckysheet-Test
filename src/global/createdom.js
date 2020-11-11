@@ -19,6 +19,7 @@ import rhchInit from './rhchInit';
 import { replaceHtml } from '../utils/util';
 import Store from '../store';
 import locale from '../locale/locale';
+import {cellRightClickHTML} from '../maxhubExtendScript/cellRightClickHTML';
 
 export default function luckysheetcreatedom(colwidth, rowheight, data, menu, title) {
     // //最少30行
@@ -106,7 +107,8 @@ export default function luckysheetcreatedom(colwidth, rowheight, data, menu, tit
     //新建行菜单
     $("body").append(maskHTML);
     $("body").append(colsmenuHTML);
-    $("body").append(rightclickHTML());
+    // $("body").append(rightclickHTML());
+    $("body").append(cellRightClickHTML());
     $("body").append(inputHTML);
     $("body").append(replaceHtml(filtermenuHTML(), { "menuid": "filter" }));
     $("body").append(replaceHtml(filtersubmenuHTML(), { "menuid": "filter" }));

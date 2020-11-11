@@ -1,4 +1,4 @@
-
+import {extendCommonInitial} from './maxhubExtendScript/common';
 import defaultSetting from './config.js';
 import { common_extend } from './utils/util';
 import Store from './store';
@@ -177,6 +177,7 @@ function initialWorkBook(){
     orderByInitial();//menu bar orderby function initialization
     zoomInitial();//zoom method initialization
     printInitial();//print initialization
+    extendCommonInitial();
 }
 
 //获取所有表格数据
