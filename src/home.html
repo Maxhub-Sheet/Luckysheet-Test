@@ -13,8 +13,11 @@
     <link rel="stylesheet" href="./plugins/css/pluginsCss.css" />
     <link rel="stylesheet" href="./plugins/plugins.css" />
     <link rel="stylesheet" href="./css/luckysheet.css" />
-	<link rel="stylesheet" href="./assets/iconfont/iconfont.css" />
-	<link rel="stylesheet" href="//at.alicdn.com/t/font_1612872_n3c8mh6jsh.css">
+    <link rel="stylesheet" href="./assets/iconfont/iconfont.css" />
+    <link
+      rel="stylesheet"
+      href="//at.alicdn.com/t/font_1612872_n3c8mh6jsh.css"
+    />
     <script src="./plugins/js/plugin.js"></script>
 
     <script src="./luckysheet.umd.js"></script>
@@ -27,44 +30,44 @@
     ></div>
 
     <script type="module">
-	  import sheetCell from "./demoData/maxhub_sheetCell.js";
-	  import sheetFormula from "./demoData/sheetFormula.js";
+      import sheetCell from "./demoData/maxhub_sheetCell.js";
+      import sheetFormula from "./demoData/sheetFormula.js";
 
       $(function() {
         luckysheet.create({
-          container: "luckysheet", //表格容器
-          lang: "zh", //语言环境
-          allowEdit: true, //是否允许前台编辑
-          forceCalculation: false, //是否强制刷新公式
-          showinfobar: false, //隐藏顶部信息栏
-          showtoolbar: false, //隐藏顶部工具栏并控制让部分菜单显()
+          container        : "luckysheet",   /*表格容器*/
+          lang             : "zh",           /*语言环境*/
+          allowEdit        : true,           //是否允许前台编辑
+          forceCalculation : false,          //是否强制刷新公式
+          showinfobar      : false,          //隐藏顶部信息栏
+          showtoolbar      : false,          //隐藏顶部工具栏并控制让部分菜单显()
           showtoolbarConfig: {
-            undoRedo: true, //撤销
-            font: true, //重做
-            fontSize: true, //字号大小
-            textColor: true, //文本颜色
-            fillColor: true, //单元格颜色,
-            link:false
-		  },
-		  showstatisticBar: false,
-          showsheetbar: false,
-          showsheetbarConfig: {
-			sheet:true,
-			menu:true
+            undoRedo : true,    //撤销
+            font     : true,    //重做
+            fontSize : true,    //字号大小
+            textColor: true,    //文本颜色
+            fillColor: true,    //单元格颜色,
+            link     : false,
           },
-          plugins: ["chart"], //配置插件，支持图表chart
+          showstatisticBar  : false,
+          showsheetbar      : false,
+          showsheetbarConfig: {
+            sheet: true,
+            menu : true,
+          },
+          plugins: ["chart"],   //配置插件，支持图表chart
           fontList: [
             {
               fontName: "HanaleiFill",
-              url: "./assets/iconfont/HanaleiFill-Regular.ttf",
+              url     : "./assets/iconfont/HanaleiFill-Regular.ttf",
             },
             {
               fontName: "Anton",
-              url: "./assets/iconfont/Anton-Regular.ttf",
+              url     : "./assets/iconfont/Anton-Regular.ttf",
             },
             {
               fontName: "Pacifico",
-              url: "./assets/iconfont/Pacifico-Regular.ttf",
+              url     : "./assets/iconfont/Pacifico-Regular.ttf",
             },
           ],
           hook: {
@@ -99,7 +102,7 @@
               // console.log(cell,postion,sheetFile,moveState,ctx);
             },
           },
-          data:[sheetCell,sheetFormula]
+          data: [sheetCell, sheetFormula],
           // data: [sheetCell,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetFormula,sheetCell,sheetFormula],
         });
       });

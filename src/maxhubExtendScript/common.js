@@ -1,3 +1,9 @@
+import { luckysheetContainerFocus } from '../utils/util';
+import locale from '../locale/locale';
+import tooltip from '../global/tooltip';
+import Store from '../store';
+import { luckysheetextendtable } from '../global/extend';
+
 export function extendCommonInitial() {
 
     let scaleMinAndScalePlusHtml = `
@@ -37,5 +43,34 @@ export function extendCommonInitial() {
 
     $("body").click((e) => {
         $("#luckysheet-sheets-menu").find(".iconFormToolbar_icon_AllForms").removeClass("activate-style");
-      });
+    });
+
+    $("#luckysheet-insert-r-above").click(()=>operationWithRowOrColumn("row","lefttop"));
+    $("#luckysheet-insert-r-below").click(()=>operationWithRowOrColumn("row","rightbottom"));
+    $("#luckysheet-insert-c-above").click(()=>operationWithRowOrColumn("column","lefttop"));
+    $("#luckysheet-insert-c-below").click(()=>operationWithRowOrColumn("column","rightbottom"));
+ 
+    function operationWithRowOrColumn(type,direction){
+        $("#luckysheet-rightclick-menu").hide();
+        luckysheetContainerFocus();
+
+        const _locale = locale();
+        const locale_drag = _locale.drag;
+        console.log('Store.luckysheet_select_save',Store.luckysheet_select_save);
+        if (Store.luckysheet_select_save.length > 1) {
+            if (isEditMode()) {
+                console.log("#1")
+                alert(locale_drag.noMulti);
+            }
+            else {
+                console.log("#2",locale_drag.noMulti)
+                tooltip.info(locale_drag.noMulti, "");
+            }
+            return;
+        }
+
+        console.log("#3")
+        let st_index = Store.luckysheet_select_save[0][type][0];
+        luckysheetextendtable(type, st_index, 1, direction);
+    }
 }

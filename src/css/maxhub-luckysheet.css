@@ -29,6 +29,7 @@
 
 .luckysheet-sheet-area div.luckysheet-sheets-item-active .luckysheet-sheets-item-color {
     background-color: #487ff8;
+    height: 2px !important;
 }
 
 .luckysheet-sheet-area div.luckysheet-sheets-item .luckysheet-sheets-item-name {
@@ -271,4 +272,10 @@
 
   .sp-palette-button-container{
       /* display: none; */
+  }
+
+  .luckysheet-menuseparator-custom{
+    border-top: 1px solid #ebebeb;
+    margin-top: 6px;
+    margin-bottom: 6px;
   }
