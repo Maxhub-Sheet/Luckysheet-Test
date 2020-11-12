@@ -41,6 +41,14 @@ export function extendCommonInitial() {
         $("#luckysheet-sheet-list .icon").find("i").addClass("iconfont iconicon_nav_tick");
     })
 
+    $("#luckysheet-icon-font-size").click(function(e){
+        $("#luckysheet-icon-font-size-menuButton .icon").find("i").addClass("iconfont iconicon_nav_tick");
+    })
+
+    $("#luckysheet-icon-font-family").click(function(e){
+        $("#luckysheet-icon-font-family-menuButton .icon").find("i").addClass("iconfont iconicon_nav_tick");
+    })
+
     $("body").click((e) => {
         $("#luckysheet-sheets-menu").find(".iconFormToolbar_icon_AllForms").removeClass("activate-style");
     });

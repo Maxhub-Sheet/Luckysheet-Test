@@ -41,7 +41,7 @@ function customCellRightClickConfig() {
 }
 
 
-export function cellRightClickHTML() {
+export function _rightClickHTML() {
     const _locale = locale();
     const rightclick = Object.assign(_locale.rightclick,{
         clip:"剪贴",
@@ -103,7 +103,7 @@ export function cellRightClickHTML() {
                     <div class="luckysheet-cols-menuitem-content luckysheet-mousedown-cancel">${rightclick.paste}</div>
                 </div>
                 <div id="luckysheet-cols-rows-handleincell">
-                    <div class="luckysheet-menuseparator luckysheet-mousedown-cancel" role="separator" style="display:${handleincellMenuseparator ? 'block' : 'none'};"></div>
+                    <div class="luckysheet-menuseparator luckysheet-menuseparator-custom luckysheet-mousedown-cancel" role="separator" style="display:${handleincellMenuseparator ? 'block' : 'none'};"></div>
                     <div id="luckysheetColsRowsHandleAdd_row" class="luckysheet-cols-menuitem luckysheet-mousedown-cancel" style="display:${config.insertRow ? 'block' : 'none'};">
                         <div class="luckysheet-cols-menuitem-content luckysheet-mousedown-cancel">
                             ${rightclick.insert}${rightclick.row}<span class="luckysheet-submenu-arrow" style="user-select: none;"></span>

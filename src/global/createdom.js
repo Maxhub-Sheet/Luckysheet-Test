@@ -19,7 +19,9 @@ import rhchInit from './rhchInit';
 import { replaceHtml } from '../utils/util';
 import Store from '../store';
 import locale from '../locale/locale';
-import {cellRightClickHTML} from '../maxhubExtendScript/cellRightClickHTML';
+/* #wdd-0003 引入新的模块(扩展的模块总是以_开头) */
+import {_rightClickHTML} from '../maxhubExtendScript/_rightClickHTML';
+import {_menuToolBar} from '../maxhubExtendScript/_menuToolBar';
 
 export default function luckysheetcreatedom(colwidth, rowheight, data, menu, title) {
     // //最少30行
@@ -34,7 +36,8 @@ export default function luckysheetcreatedom(colwidth, rowheight, data, menu, tit
 
     let gh = gridHTML();
     gh = replaceHtml(gh, { "logotitle": title });//设置title
-    gh = replaceHtml(gh, { "menu": menuToolBar() });//设置需要显示的菜单
+    // gh = replaceHtml(gh, { "menu": menuToolBar() });//设置需要显示的菜单
+    gh = replaceHtml(gh, { "menu": _menuToolBar(menuToolBar()) });  /* #wdd-0001 工具栏进行了额外的处理 */
 
     // if (data.length == 0) {
     //     Store.flowdata = datagridgrowth(data, rowheight, colwidth);
@@ -108,7 +111,7 @@ export default function luckysheetcreatedom(colwidth, rowheight, data, menu, tit
     $("body").append(maskHTML);
     $("body").append(colsmenuHTML);
     // $("body").append(rightclickHTML());
-    $("body").append(cellRightClickHTML());
+    $("body").append(_rightClickHTML());    /* #wdd-0002 替换了右键菜单 */
     $("body").append(inputHTML);
     $("body").append(replaceHtml(filtermenuHTML(), { "menuid": "filter" }));
     $("body").append(replaceHtml(filtersubmenuHTML(), { "menuid": "filter" }));
