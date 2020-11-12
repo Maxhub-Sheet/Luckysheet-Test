@@ -206,12 +206,11 @@
     float: left;
 }
 
-#luckysheet-sheet-list .icon .iconfont {
+#luckysheet-sheet-list .icon .iconfont ,#luckysheet-icon-font-size-menuButton  .iconfont , #luckysheet-icon-font-family-menuButton  .iconfont{
     font-size: 24px;
     width: 24px;
     height: 24px;
     text-align: center;
-    /* background: red; */
     float: left;
     color: #487FF8;
 }
@@ -270,10 +269,6 @@
       display: none;
   }
 
-  .sp-palette-button-container{
-      /* display: none; */
-  }
-
   .luckysheet-menuseparator-custom{
     border-top: 1px solid #ebebeb;
     margin-top: 2px;
@@ -302,24 +297,63 @@
       height: 32px;
   }
 
-  /* 工具栏的样式调整 */
-  .luckysheet-toolbar-button:hover,
+/* 工具栏的样式调整 */
+.luckysheet-toolbar-button:hover,
 .luckysheet-toolbar-menu-button:hover,
 .luckysheet-toolbar-button-hover {
     background-color: #E6EAF3 ;
     border-radius: 2px;
 }
 
-.luckysheet-toolbar-button-split-right-hover {
-    /* border-width: 1px;
-    border-color: transparent !important;
-    background-color: rgba(0, 0, 0, 0.06);
-    cursor: pointer;
-    box-shadow: none;
-    border-left-color: rgba(0, 0, 0, 0.12) !important; */
+/* 向下小尖头的hover && 字号的问题*/
+.luckysheet-toolbar-button-split-right-hover ,.luckysheet-toolbar-combo-button:hover {
     background-color: #E6EAF3 ;
 }
 
-.luckysheet-toolbar-combo-button:hover{
-    background-color: #E6EAF3 ;
+.jfk-tooltip{
+    opacity: 0.7;
+    background: #333;
+}
+
+.jfk-tooltip-arrowdown .jfk-tooltip-arrowimplafter,
+.jfk-tooltip-arrowup .jfk-tooltip-arrowimplafter {
+    border-color: rgb(51, 51, 51) transparent;
+    left: -5px;
+}
+
+
+#luckysheet-icon-font-size-menuButton{
+    width: 76px !important;
+}
+
+#luckysheet-icon-font-family-menuButton{
+    width: 193px !important;
+}
+
+#luckysheet-icon-font-size-menuButton .luckysheet-cols-menuitem, 
+#luckysheet-icon-font-family-menuButton .luckysheet-cols-menuitem
+{
+    padding: 0px 4px;
+}
+
+#luckysheet-icon-font-size-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content,
+#luckysheet-icon-font-family-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content
+ {
+    padding: 0px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+}
+
+#luckysheet-icon-font-size-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content .icon,
+#luckysheet-icon-font-family-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content .icon{
+    margin: 4px;
+    width: 24px !important;
+    height: 24px !important;
+    float: left;
+}
+
+/* 隐藏工具栏中字体和字号之间的竖线 */
+#toolbar-separator-font-family,#toolbar-separator-text-color{
+    display: none;
 }

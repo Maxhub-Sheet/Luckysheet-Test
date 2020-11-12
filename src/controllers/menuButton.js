@@ -112,9 +112,9 @@ const menuButton = {
     },
     luckysheetPaintModelOn:false,
     luckysheetPaintSingle: false,
-    initialMenuButton: function(){
+    initialMenuButton: function(extendTask){
+        extendTask && extendTask(this);         /* #wdd-0005-1 添加参数对自定义工具栏的部分操作(插入行和插入列等)进行处理*/
         let _this = this;
-
         //格式刷
         $("#luckysheet-icon-paintformat").click(function(){
 

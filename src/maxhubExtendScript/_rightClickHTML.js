@@ -41,7 +41,7 @@ function customCellRightClickConfig() {
 }
 
 
-export function cellRightClickHTML() {
+export function _rightClickHTML() {
     const _locale = locale();
     const rightclick = Object.assign(_locale.rightclick,{
         clip:"剪贴",

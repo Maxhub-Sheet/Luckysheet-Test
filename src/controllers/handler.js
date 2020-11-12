@@ -66,6 +66,7 @@ import { luckysheetDrawMain } from '../global/draw';
 import locale from '../locale/locale';
 import Store from '../store';
 import { createLuckyChart, hideAllNeedRangeShow } from '../expendPlugins/chart/plugin'
+import { _menuButtonInitExtend } from '../maxhubExtendScript/_menuButton';      /* #wdd-0005-2 添加参数对自定义工具栏的部分操作(插入行和插入列等)进行处理*/
 
 //, columeflowset, rowflowset
 export default function luckysheetHandler() {
@@ -5154,7 +5155,7 @@ export default function luckysheetHandler() {
     // });
 
     //表格格式处理
-    menuButton.initialMenuButton();
+    menuButton.initialMenuButton(_menuButtonInitExtend); /* #wdd-0005-3 添加参数对自定义工具栏的部分操作(插入行和插入列等)进行处理*/
 
     let dpi_x = document.getElementById('testdpidiv').offsetWidth * Store.devicePixelRatio;
     let dpi_y = document.getElementById('testdpidiv').offsetHeight * Store.devicePixelRatio;
