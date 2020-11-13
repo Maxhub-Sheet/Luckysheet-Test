@@ -22,7 +22,7 @@ export function _menuToolBar(menuToolBarHtml){
     // 拼接新的工具菜单
 
     html += `<div class="luckysheet-toolbar-button-split-left luckysheet-toolbar-button luckysheet-inline-block"
-    data-tips="${toolbar.insertRow}" id="luckysheet-add-row" role="button" style="user-select: none;">
+    data-tips="${toolbar.insertRow}" id="luckysheet-icon-add-row" role="button" style="user-select: none;">
         <div class="luckysheet-toolbar-button-outer-box luckysheet-inline-block"
         style="user-select: none;">
             <div class="luckysheet-toolbar-menu-button-inner-box luckysheet-inline-block"
@@ -39,7 +39,7 @@ export function _menuToolBar(menuToolBarHtml){
         </div>
     </div>
     <div class="luckysheet-toolbar-button-split-left luckysheet-toolbar-button luckysheet-inline-block"
-    data-tips="${toolbar.insertColumn}" id="luckysheet-add-column" role="button" style="user-select: none;">
+    data-tips="${toolbar.insertColumn}" id="luckysheet-icon-add-column" role="button" style="user-select: none;">
         <div class="luckysheet-toolbar-button-outer-box luckysheet-inline-block"
         style="user-select: none;">
             <div class="luckysheet-toolbar-menu-button-inner-box luckysheet-inline-block"

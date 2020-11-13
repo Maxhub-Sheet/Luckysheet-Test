@@ -4,6 +4,31 @@ import tooltip from '../global/tooltip';
 import Store from '../store';
 import { luckysheetextendtable } from '../global/extend';
 
+export function operationWithRowOrColumn(type,direction){
+    $("#luckysheet-rightclick-menu").hide();
+    luckysheetContainerFocus();
+
+    const _locale = locale();
+    const locale_drag = _locale.drag;
+    console.log('Store.luckysheet_select_save',Store.luckysheet_select_save);
+    if (Store.luckysheet_select_save.length > 1) {
+        if (isEditMode()) {
+            console.log("#1")
+            alert(locale_drag.noMulti);
+        }
+        else {
+            console.log("#2",locale_drag.noMulti)
+            tooltip.info(locale_drag.noMulti, "");
+        }
+        return;
+    }
+
+    console.log("#3")
+    let st_index = Store.luckysheet_select_save[0][type][0];
+    console.log('计算数值：', type, st_index, 1, direction);
+    luckysheetextendtable(type, st_index, 1, direction);
+}
+
 export function extendCommonInitial() {
 
     let scaleMinAndScalePlusHtml = `
@@ -41,8 +66,13 @@ export function extendCommonInitial() {
         $("#luckysheet-sheet-list .icon").find("i").addClass("iconfont iconicon_nav_tick");
     })
 
+    /* 后续的时候封装下： */
     $("#luckysheet-icon-font-size").click(function(e){
         $("#luckysheet-icon-font-size-menuButton .icon").find("i").addClass("iconfont iconicon_nav_tick");
+    })
+
+    $("#luckysheet-icon-add-row").click(function(e){
+        $("#luckysheet-icon-add-row-menuButton .icon").find("i").addClass("iconfont iconicon_nav_tick");
     })
 
     $("#luckysheet-icon-font-family").click(function(e){
@@ -57,28 +87,5 @@ export function extendCommonInitial() {
     $("#luckysheet-insert-r-below").click(()=>operationWithRowOrColumn("row","rightbottom"));
     $("#luckysheet-insert-c-above").click(()=>operationWithRowOrColumn("column","lefttop"));
     $("#luckysheet-insert-c-below").click(()=>operationWithRowOrColumn("column","rightbottom"));
- 
-    function operationWithRowOrColumn(type,direction){
-        $("#luckysheet-rightclick-menu").hide();
-        luckysheetContainerFocus();
 
-        const _locale = locale();
-        const locale_drag = _locale.drag;
-        console.log('Store.luckysheet_select_save',Store.luckysheet_select_save);
-        if (Store.luckysheet_select_save.length > 1) {
-            if (isEditMode()) {
-                console.log("#1")
-                alert(locale_drag.noMulti);
-            }
-            else {
-                console.log("#2",locale_drag.noMulti)
-                tooltip.info(locale_drag.noMulti, "");
-            }
-            return;
-        }
-
-        console.log("#3")
-        let st_index = Store.luckysheet_select_save[0][type][0];
-        luckysheetextendtable(type, st_index, 1, direction);
-    }
 }

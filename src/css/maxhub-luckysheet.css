@@ -353,6 +353,12 @@
     float: left;
 }
 
+#luckysheet-icon-add-column-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content,
+#luckysheet-icon-add-row-menuButton .luckysheet-cols-menuitem .luckysheet-cols-menuitem-content
+{
+    padding: 8px 0px !important;
+}
+
 /* 隐藏工具栏中字体和字号之间的竖线 */
 #toolbar-separator-font-family,#toolbar-separator-text-color{
     display: none;
