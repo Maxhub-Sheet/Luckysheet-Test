@@ -88,4 +88,6 @@ export function extendCommonInitial() {
     $("#luckysheet-insert-c-above").click(()=>operationWithRowOrColumn("column","lefttop"));
     $("#luckysheet-insert-c-below").click(()=>operationWithRowOrColumn("column","rightbottom"));
 
+    /* 默认把撤销和重做操作置灰 */
+    $("#luckysheet-icon-undo,#luckysheet-icon-redo").attr("disabled",true);
 }

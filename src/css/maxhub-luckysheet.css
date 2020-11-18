@@ -363,3 +363,8 @@
 #toolbar-separator-font-family,#toolbar-separator-text-color{
     display: none;
 }
+
+/* 撤销和重做功能 */
+#luckysheet-icon-undo[disabled],#luckysheet-icon-redo[disabled]{
+    opacity: 0.3;
+}

@@ -31,7 +31,7 @@ export function _menuButtonInitExtend(ctx) {
                 console.log('执行插入行的操作')
                 $menuButton.hide();
                 luckysheetContainerFocus();
-                operationWithRowOrColumn("row",$t.attr("itemvalue"));
+                operationWithRowOrColumn("row",$(this).attr("itemvalue"));
                
                 // _this.focus($menuButton, itemvalue);
                 // $("#luckysheet-icon-font-family").find(".luckysheet-toolbar-menu-button-caption").html(" "+ itemname +" ");
@@ -74,7 +74,7 @@ export function _menuButtonInitExtend(ctx) {
                 console.log('插入列的操作');
                 $menuButton.hide();
                 luckysheetContainerFocus();
-                operationWithRowOrColumn("column",$t.attr("itemvalue"));
+                operationWithRowOrColumn("column",$(this).attr("itemvalue"));
                 // _this.focus($menuButton, itemvalue);
                 // $("#luckysheet-icon-font-family").find(".luckysheet-toolbar-menu-button-caption").html(" "+ itemname +" ");
                 // let d = editor.deepCopyFlowData(Store.flowdata);
